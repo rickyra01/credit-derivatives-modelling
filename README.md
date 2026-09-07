@@ -4,25 +4,21 @@ This project implements a simplified credit risk modelling pipeline in Python, i
 
 ## Project Structure
 
-- `data/`
-  - `raw/` – input Excel files (market data)
-  - `processed/` – generated discount factors
+- `data/` – input Excel files (market data)
 - `outputs/` – plots and model outputs
-- `zcb_curve.py`
-- `cds_calibration.py`
-- `copula_simulation.py`
+- `credit_derivatives_assignment.ipynb`
 - `requirements.txt`
 
 ## Workflow
 
 1. **Yield Curve Calibration**  
-   Calibrate a Nelson–Siegel–Svensson (NSS) model to the swap curve and compute discount factors (`zcb_curve.py`)
+   Calibrate a Nelson–Siegel–Svensson (NSS) model to the swap curve and compute discount factors
 
 2. **CDS Calibration**  
-   Bootstrap hazard rates from CDS spreads and compute survival and default probabilities (`cds_calibration.py`)
+   Bootstrap hazard rates from CDS spreads and compute survival and default probabilities
 
 3. **Copula Simulation**  
-   Simulate correlated default times using a Gaussian copula and price a stylized first-to-default CDS via Monte Carlo (`copula_simulation.py`)
+   Simulate correlated default times using a Gaussian copula and price a stylized first-to-default CDS via Monte Carlo
 
 ## Methodology
 
@@ -35,7 +31,7 @@ This project implements a simplified credit risk modelling pipeline in Python, i
 
 ## Data
 
-- Market data: CDS spreads and swap curve (Excel files in `data/raw`)
+- Market data: CDS spreads and swap curve (Excel files in `data`)
 - Processed data: generated during execution (e.g. discount factors)
 
 ## Outputs
@@ -53,7 +49,3 @@ Run the scripts in sequence:
 
 ```bash
 pip install -r requirements.txt
-
-python zcb_curve.py
-python cds_calibration.py
-python copula_simulation.py
