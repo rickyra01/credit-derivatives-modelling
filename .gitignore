@@ -14,14 +14,12 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Outputs
-outputs/*.png
-outputs/*.csv
-reports/*.pdf
+outputs/
 
 # (Opzionale) raw data se non vuoi condividerli
 data/processed/
 
-# Other folder (come dicevi)
+# Other folder
 other/
 
 # Environment / config
